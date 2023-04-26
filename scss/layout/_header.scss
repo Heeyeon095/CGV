@@ -1,0 +1,295 @@
+$fosi: 14px;
+
+.add-wrap {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(22, 118, 197);
+}
+
+.add-wrap.on {
+  display: block;
+  line-height: 30px;
+}
+
+.add {
+  position: relative;
+  top: 0;
+  left: calc(50% - 500px);
+  width: 1000px;
+  height: 80px;
+
+  i {
+    position: absolute;
+    font-size: 1.8rem;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 115px;
+  background-color: #fff;
+  z-index: 9999;
+
+  .header-wrap {
+    position: relative;
+    left: calc(50% - 500px);
+    width: 1000px;
+    height: 115px;
+    overflow: hidden;
+
+    .logo {
+      width: 120px;
+      height: 100%;
+      margin-left: 30px;
+      background-image: url(../images/logoRed.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    span {
+      color: #666;
+      font-size: 16px;
+      margin-top: 65px;
+    }
+
+  }
+
+}
+
+.header-icon-wrap {
+  width: 300px;
+  height: 100%;
+  margin-top: 20px;
+
+  img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+  }
+
+}
+
+.header-icon-wrap > div {
+  position: relative;
+  top: 10px;
+  width: 25%;
+  font-size: 12px;
+  text-align: center;
+  color: #666;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(255, 53, 53);
+  }
+
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  border-bottom: 2px solid rgb(255, 53, 53);
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.scroll-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 65px;
+  background-image: linear-gradient(to right, rgb(215, 67, 87), rgb(241,79,58) 59%, rgb(239, 100, 47));
+  border: none;
+  z-index: 99999;
+
+  .scroll-nav-logo {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    margin-left: 30px;
+    cursor: pointer;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+  }
+
+  .menu {
+    margin-top: 5px;
+  }
+
+  .menu > li {
+    width: 80px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .menu > li:nth-child(3) {
+    color: #fff;
+  }
+
+  .menu > li > a {
+    color: #fff;
+  }
+
+  .search input {
+    margin-left: -70px;
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .search-icon {
+    margin-left: 10px;
+    line-height: 30px;
+  }
+
+}
+
+.menu {
+  position: relative;
+  left: calc(50% - 500px);
+  width: 1000px;
+  height: 100%;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.menu > li {
+  width: 100px;
+  height: 100%;
+  margin-bottom: 2px;
+}
+
+.menu > li > a {
+  display: block;
+  font-weight: bold;
+  line-height: 55px;
+}
+
+.menu > li:nth-child(3) {
+  color: rgb(255, 53, 53);
+}
+
+
+.menu > .sub-menu-wrap {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  // top: 125px;
+  width: 100vw;
+  height: 340px;
+  background-color: #fefefe;
+}
+
+@media (max-width: 1200px) {
+  .menu > .sub-menu-wrap {
+    width: 100%;
+  }
+}
+
+.sub-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  font-size: $fosi;
+  font-weight: bold;
+};
+
+.sub-menu > li {
+  position: relative;
+  height: 40px;
+  margin-top: 10px;
+  border-left: 1.5px solid #ddd;
+  color: #222;
+}
+
+.sub-menu > li:first-child {
+  border: none;
+}
+
+.sub-menu > li > a {
+  display: block;
+  line-height: 40px;
+}
+
+.sub-menu2 {
+  width: 175px;
+  height: 250px;
+  color: #777;
+  border-left: 1.5px solid #ddd;
+  margin-left: -1px;
+  line-height: 30px;
+  font-size: 13px;
+
+  li {
+    width: 100%;
+    height: 30px;
+  }
+  
+  a {
+    display: block;
+  }
+
+}
+
+.sub-menu > li:nth-child(3) > a {
+  text-decoration: underline;
+}
+
+.sub-menu > li:first-child .sub-menu2 {
+  border: none;
+}
+
+.sub-menu2 > li > a:hover {
+  color: rgb(255, 53, 53);
+}
+
+.search-wrap {
+  position: relative;
+  top: 10px;
+  right: 20px;
+  width: 220px;
+  height: 32px;
+}
+
+.search input {
+  width: 190px;
+  height: 32px;
+  padding: 0 15px;
+  border: 1.5px solid #ccc;
+  background-color: #fff;
+  border-radius: 30px;
+  font-size: $fosi;
+  outline: none;
+}
+
+.search input:focus {
+  border: 1.5px solid rgb(255, 53, 53);
+  background-color: #fff;
+}
+
+.search-icon {
+  font-size: 1.4rem;
+  line-height: 30px;
+  cursor: pointer;
+}
